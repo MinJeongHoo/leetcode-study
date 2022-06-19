@@ -20,6 +20,7 @@ class Solution(object):
                 else :
                     # 탐색 완료
                     ans.append([nums[l],nums[i],nums[r]])
+                    ## 배열에 중복되게 들어가는 것을 막아주기 위해서 같은 다음 값과 같을때 l 혹은 r 값을 한번 더 움직여 준다.
                     while l < n-1 and nums[l] == nums[l+1] :
                         l += 1
                     while r > 1 and nums[r] == nums[r-1] :
@@ -28,3 +29,4 @@ class Solution(object):
                     r -= 1
 
         return ans
+## 투포인터 전략을 사용한다. 
