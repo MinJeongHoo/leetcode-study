@@ -4,7 +4,7 @@ class Solution(object):
         nums.sort()
 
         for i in range(n) :
-
+            ## 값이 같을때 스킵(다음 값으로 스킵)
             if i > 0 and nums[i] == nums[i-1] :
                 continue
 
